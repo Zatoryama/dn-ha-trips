@@ -3,6 +3,8 @@ import { writeFile } from 'fs/promises';
 import path from 'path';
 import { validateAdminToken } from '@/data/driverStore';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(request: NextRequest) {
   const token = request.headers.get('X-Admin-Token');
   if (!token || !validateAdminToken(token)) {

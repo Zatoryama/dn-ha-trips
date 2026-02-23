@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getDrivers, updateDriver, validateAdminToken } from '@/data/driverStore';
 
+export const dynamic = 'force-dynamic';
+
 function checkAuth(request: NextRequest): boolean {
   const token = request.headers.get('X-Admin-Token');
   return !!token && validateAdminToken(token);
