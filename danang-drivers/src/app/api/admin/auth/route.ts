@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createAdminToken } from '@/data/driverStore';
 
-export const dynamic = 'force-dynamic';
-
 const ADMIN_PASSWORD = 'di-mo-rua';
 
 export async function POST(request: NextRequest) {

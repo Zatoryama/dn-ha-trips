@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-export const dynamic = 'force-dynamic';
-
 // In-memory store for demo (replace with MongoDB in production)
 const bookings: Array<{
   id: string;

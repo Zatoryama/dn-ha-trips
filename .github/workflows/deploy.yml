@@ -30,6 +30,12 @@ jobs:
         working-directory: danang-drivers
         run: npm ci
 
+      - name: Remove server-only routes for static export
+        working-directory: danang-drivers
+        run: |
+          rm -rf src/app/api
+          rm -rf src/app/admin
+
       - name: Build static export
         working-directory: danang-drivers
         env:
